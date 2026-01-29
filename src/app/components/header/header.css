@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'frijole';
+    src: url(../../fonts/frijole.ttf) format("truetype");
+}
+
+
+.default-header {
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'frijole', Arial, sans-serif;
+    color: red;
+}
