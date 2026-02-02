@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core'
+import { Router } from '@angular/router'
 import gsap from 'gsap'
 
 @Component({
@@ -10,11 +11,13 @@ import gsap from 'gsap'
 
 export class Appbutton {
   @Input() text: string = `Boton`
-
   private _color : string = `black`
   protected textColor : string = `white`
-
   @Input() margin: string = `1rem` 
+  @Input() ruta: string = ``
+
+
+  constructor(private router: Router) {}
 
   @Input() 
   set color(value: string) {
@@ -60,5 +63,13 @@ export class Appbutton {
       duration: 2,
       ease: 'elastic.out(1, 0.1)'
     })
+  }
+
+  // Ruta 
+
+  onClick() {
+    if(this.ruta) {
+      this.router.navigate([this.ruta])
+    }
   }
 }

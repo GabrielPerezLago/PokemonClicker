@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { Appbutton } from '../appbutton/appbutton';
 
 @Component({
-  selector: 'app-inicio',
-  imports: [],
+  selector: 'inicio',
+  imports: [Appbutton],
   templateUrl: './inicio.html',
   styleUrl: './inicio.css',
 })
 export class Inicio {
-  protected readonly texto = "Inicio"
+
 }

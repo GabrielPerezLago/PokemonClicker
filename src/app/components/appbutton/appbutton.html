@@ -1,1 +1,11 @@
-<input #btn type="submit" value="{{text}}" class="btn-app" [style.backgroundColor]="color" [style.color]="textColor" [style.margin]="margin" (mouseenter)="hover()" (mouseleave)="leave()">
+<input 
+    #btn 
+    type="submit" 
+    value="{{text}}" 
+    class=" w-100 px-10 py-5 rounded-full text-grande font-frijole" 
+    [style.backgroundColor]="color" 
+    [style.color]="textColor" 
+    [style.margin]="margin" 
+    (mouseenter)="hover()" 
+    (mouseleave)="leave()"
+    (click)="onClick()">
