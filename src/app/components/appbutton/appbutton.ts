@@ -15,6 +15,7 @@ export class Appbutton {
   protected textColor : string = `white`
   @Input() margin: string = `1rem` 
   @Input() ruta: string = ``
+  @Input() salir: string = ``
 
 
   constructor(private router: Router) {}
@@ -34,7 +35,7 @@ export class Appbutton {
 
     
   
-  
+  // Amimaciones
 
   @ViewChild('btn') btn!: ElementRef;
 
@@ -68,8 +69,21 @@ export class Appbutton {
   // Ruta 
 
   onClick() {
+
+    if (this.strToBool(this.salir)) {
+      window.electronAPI.quitApp()
+    } 
+
     if(this.ruta) {
       this.router.navigate([this.ruta])
     }
   }
+
+
+  private strToBool(str: string): boolean {
+    return str === `true`
+  }
+
 }
+
+
