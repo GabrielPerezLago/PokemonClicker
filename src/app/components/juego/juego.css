@@ -1,7 +1,26 @@
-header {
-    min-height: 10rem;
-}
-
 .container-main {
     text-align: center;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer {
+    margin: 3rem;
+    display: grid;
+    grid-template-areas: 
+    "temp cont bttn";
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.temp{grid-area: temp;}
+.cont{grid-area: cont;}
+.btn { grid-area: bttn;}
+

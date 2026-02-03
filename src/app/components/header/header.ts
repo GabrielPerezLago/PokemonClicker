@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'default-header',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-  protected readonly tittle = "Pokemon Clicker"
+  @Input() tittle: string = "Pokemon Clicker"
+  @Input() color: string = "red"
 }

@@ -8,7 +8,8 @@ module.exports = {
       fontSize: {
         'peq': '1rem',
         'med': '1.5rem',
-        'grande': '2rem'
+        'grande': '2rem',
+        'gigante': '5rem'
       },
       fontFamily: {
         'frijole': ['frijole', 'sans-serif']

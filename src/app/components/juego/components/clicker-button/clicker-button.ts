@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import gsap from 'gsap';
+import { Game } from '../../../../global/Game';
 
 @Component({
   selector: 'clicker-button',
@@ -9,6 +10,11 @@ import gsap from 'gsap';
 })
 export class ClickerButton {
   
+  constructor(private game: Game) {}
+  
+  onClick() {
+    this.game.addClick()
+  }
 
   @ViewChild('btn') btn!: ElementRef;
 
@@ -17,19 +23,17 @@ export class ClickerButton {
     gsap.killTweensOf(this.btn.nativeElement)
 
     gsap.to( this.btn.nativeElement ,{
-      scale: 0.8,
-      duration: 0.9,
-      ease: 'elastic.out(1, 0.1)'
+      scale: 0.7,
+      duration: 0.5,
+      ease: 'power2.out'
     })
   }
-
-
   onMouseUp() {
     gsap.killTweensOf(this.btn.nativeElement)
 
     gsap.to( this.btn.nativeElement ,{
       scale: 1,
-      duration: 0.9,
+      duration: 0.5,
       ease: 'power2.out'
     })
   }
