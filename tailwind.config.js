@@ -12,7 +12,8 @@ module.exports = {
         'gigante': '5rem'
       },
       fontFamily: {
-        'frijole': ['frijole', 'sans-serif']
+        'frijole': ['frijole', 'sans-serif'],
+        'electrolize': ['electrolize', 'sans-serif']
       }
     },
   },
