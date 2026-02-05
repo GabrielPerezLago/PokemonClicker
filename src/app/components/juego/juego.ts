@@ -6,6 +6,7 @@ import { ContadorJuego } from './components/contador-juego/contador-juego';
 import { Game } from '../../global/Game';
 import { Tiempo } from './components/tiempo/tiempo';
 import { Router } from '@angular/router';
+import { DBController } from '../../global/DBController';
 
 @Component({
   selector: 'juego',
@@ -15,12 +16,12 @@ import { Router } from '@angular/router';
 })
 export class Juego {
   protected readonly defaultName = `User`
-  constructor(public game : Game, private ruter: Router){}
+  constructor(public game : Game, private ruter: Router, private dbController: DBController){}
 
 
   public toEndGAme() {
-    alert(`nombre: ${this.game.nombre()}, clicks: ${this.game.click()}, tiempo: ${this.game.tiempo()}`)
-
+    this.dbController.insertGame(this.game.nombre(), this.game.click(), this.game.tiempo())
+    
     this.game.reset()
 
     this.ruter.navigate(['/inicio'])

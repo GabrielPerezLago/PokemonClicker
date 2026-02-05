@@ -1,0 +1,11 @@
+<header>
+    <default-header tittle="Puntuaciones" margin="8rem" color="white"></default-header>
+</header>
+<main class="text-center flex-auto m-16">
+    <app-button text="Salir" color="red" ruta="/inicio"></app-button>
+    <card nombre="Nombre" clicks="Cliks" tiempo="Tiempo" color="purple" ></card>
+    <card *ngFor="let partida of historial"
+        [nombre]="partida.NOMBRE"
+        [clicks]="partida.CLICKS"
+        [tiempo]="partida.TIEMPO"></card>
+</main>

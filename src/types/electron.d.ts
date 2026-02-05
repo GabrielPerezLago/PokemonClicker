@@ -3,7 +3,9 @@ export {}
 declare global {
     interface Window {
         electronAPI: {
-            quitApp: () => void
+            saveGame: (data: { nombre: string; clicks: number; tiempo?: string }) => Promise<void>;
+            getGame: () => Promise<any[]>;
+            quitApp: () => Promise<void>;
         }
     }
 }

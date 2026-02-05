@@ -1,0 +1,18 @@
+.card-container {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-image: url('../../../../assets/img/gengar.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 3rem;
+    padding: 2rem;
+
+}
+
+.card-element {
+    font-size: 2rem;
+}

@@ -5,7 +5,7 @@ export class Game {
 
     click = signal(0)
     nombre = signal(``)
-    tiempo = signal(`30`)
+    tiempo = signal(`00:30`)
 
     
     addClick(): void {
@@ -16,7 +16,7 @@ export class Game {
     reset(): void {
         this.click.set(0)
         this.nombre.set(``)
-        this.tiempo.set(`30`)
+        this.tiempo.set(`00:30`)
     }
 
 
