@@ -42,7 +42,7 @@ export class Appbutton {
   set color(value: string) {
       this._color = value
 
-      if( value == `white` || 
+      if( value == `white`   || 
           value === `yellow` ||
           value === `orange` ||
           value === `blue`
@@ -88,11 +88,15 @@ export class Appbutton {
     })
   }
 
-  // Ruta 
+  // esta funcion ejecuta hacciones al hacer click 
 
   onClick() {
     if(this.strToBool(this.clearGlobal)){
         this.game.reset()
+    }
+
+    if(this.strToBool(this.sendData)){
+        this.setData()
     }
 
     if (this.strToBool(this.salir)) {
@@ -102,6 +106,8 @@ export class Appbutton {
     if(this.ruta) {
       this.router.navigate([this.ruta])
     }
+
+    
   }
 
 
@@ -110,8 +116,10 @@ export class Appbutton {
   }
 
   private setData() {
-    if(this.nombre !== ``) {
+    if(this.nombre && this.nombre.trim() !== '') {
       this.game.innerNombre = this.nombre
+    } else {     
+      this.game.innerNombre = `User`
     }
   }
 

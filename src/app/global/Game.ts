@@ -4,11 +4,8 @@ import { Injectable, signal } from "@angular/core";
 export class Game {
 
     click = signal(0)
-    public nombre?: string;
+    nombre = signal(``)
     
-    getCLick(): number{
-        return this.click()
-    }
 
     addClick(): void {
         this.click.update( num => num + 1 )
@@ -21,6 +18,6 @@ export class Game {
 
 
     set innerNombre(nombre: string) {
-        this.nombre = nombre
+        this.nombre.set(nombre)
     }
 }

@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 export class Header {
   @Input() tittle: string = "Pokemon Clicker"
   @Input() color: string = "red"
+  @Input() margin: string = `0.5rem`
 }

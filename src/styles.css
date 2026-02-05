@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'electrolize';
-    src: url(assets/fonts/electrolize.ttf) format("truetype");
+    src: url(assets/fonts/electrolize.ttf) format();
 }
 
 body {

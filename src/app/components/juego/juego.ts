@@ -3,6 +3,7 @@ import { ClickerButton } from './components/clicker-button/clicker-button';
 import { Header } from '../header/header';
 import { Appbutton } from '../appbutton/appbutton';
 import { ContadorJuego } from './components/contador-juego/contador-juego';
+import { Game } from '../../global/Game';
 
 @Component({
   selector: 'juego',
@@ -11,7 +12,7 @@ import { ContadorJuego } from './components/contador-juego/contador-juego';
   styleUrl: './juego.css',
 })
 export class Juego {
-
-  public click = signal(0)
+  protected readonly defaultName = `User`
+  constructor(public game : Game){}
 
 }
