@@ -116,10 +116,11 @@ export class Appbutton {
   }
 
   private setData() {
-    if(this.nombre && this.nombre.trim() !== '') {
+    if(this.nombre != null && this.nombre.trim() !== '') {
       this.game.innerNombre = this.nombre
+      this.ruta = `/juego`
     } else {     
-      this.game.innerNombre = `User`
+      this.ruta = `/nombre`
     }
   }
 
